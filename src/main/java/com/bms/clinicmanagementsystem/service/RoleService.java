@@ -8,8 +8,8 @@ import com.bms.clinicmanagementsystem.helper.message.BusinessLogMessage;
 import com.bms.clinicmanagementsystem.helper.message.BusinessMessage;
 import com.bms.clinicmanagementsystem.model.Role;
 import com.bms.clinicmanagementsystem.repository.RoleRepository;
-import com.bms.clinicmanagementsystem.request.CreateRoleRequest;
-import com.bms.clinicmanagementsystem.request.UpdateRoleRequest;
+import com.bms.clinicmanagementsystem.request.role.CreateRoleRequest;
+import com.bms.clinicmanagementsystem.request.role.UpdateRoleRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -52,9 +52,7 @@ public class RoleService {
     }
 
     public void deleteRole(final String id) {
-        Role role = findRoleByRoleId(id);
-
-        roleRepository.delete(role);
+        roleRepository.delete(findRoleByRoleId(id));
         log.info(BusinessLogMessage.Role.ROLE_DELETED + id);
     }
 

@@ -10,12 +10,6 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @RestControllerAdvice
 public class GeneralExceptionHandler extends ResponseEntityExceptionHandler {
 
-    @ExceptionHandler(AppointmentAlreadyExistException.class)
-    @ResponseStatus(HttpStatus.CONFLICT)
-    public ResponseEntity<Object> handleAppointmentAlreadyExistException(AppointmentAlreadyExistException ex) {
-        return ResponseEntity.ok(ex.getMessage());
-    }
-
     @ExceptionHandler(AppointmentNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public ResponseEntity<Object> handleAppointmentNotFoundException(AppointmentNotFoundException ex) {
@@ -118,12 +112,6 @@ public class GeneralExceptionHandler extends ResponseEntityExceptionHandler {
         return ResponseEntity.ok(ex.getMessage());
     }
 
-    @ExceptionHandler(PatientCaseAlreadyExistException.class)
-    @ResponseStatus(HttpStatus.CONFLICT)
-    public ResponseEntity<Object> handlePatientCaseAlreadyExistException(PatientCaseAlreadyExistException ex) {
-        return ResponseEntity.ok(ex.getMessage());
-    }
-
     @ExceptionHandler(PatientCaseNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public ResponseEntity<Object> handlePatientCaseNotFoundException(PatientCaseNotFoundException ex) {
@@ -151,6 +139,12 @@ public class GeneralExceptionHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler(ScheduleNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public ResponseEntity<Object> handleScheduleNotFoundException(ScheduleNotFoundException ex) {
+        return ResponseEntity.ok(ex.getMessage());
+    }
+
+    @ExceptionHandler(ScheduleDateIsBeforeTodayException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public ResponseEntity<Object> handleScheduleDateIsBeforeTodayException(ScheduleDateIsBeforeTodayException ex) {
         return ResponseEntity.ok(ex.getMessage());
     }
 

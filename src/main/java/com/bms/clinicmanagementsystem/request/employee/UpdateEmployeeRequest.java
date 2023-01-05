@@ -1,4 +1,4 @@
-package com.bms.clinicmanagementsystem.request;
+package com.bms.clinicmanagementsystem.request.employee;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

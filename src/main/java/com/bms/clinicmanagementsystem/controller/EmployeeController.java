@@ -2,9 +2,9 @@ package com.bms.clinicmanagementsystem.controller;
 
 import com.bms.clinicmanagementsystem.dto.EmployeeDto;
 import com.bms.clinicmanagementsystem.helper.message.ControllerLogMessage;
-import com.bms.clinicmanagementsystem.request.CreateEmployeeRequest;
-import com.bms.clinicmanagementsystem.request.UpdateEmployeeRequest;
-import com.bms.clinicmanagementsystem.request.UpdateUserEmployeeRequest;
+import com.bms.clinicmanagementsystem.request.employee.CreateEmployeeRequest;
+import com.bms.clinicmanagementsystem.request.employee.UpdateEmployeeRequest;
+import com.bms.clinicmanagementsystem.request.employee.UpdateUserEmployeeRequest;
 import com.bms.clinicmanagementsystem.service.EmployeeService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;

@@ -2,8 +2,8 @@ package com.bms.clinicmanagementsystem.controller;
 
 import com.bms.clinicmanagementsystem.dto.RoleDto;
 import com.bms.clinicmanagementsystem.helper.message.ControllerLogMessage;
-import com.bms.clinicmanagementsystem.request.CreateRoleRequest;
-import com.bms.clinicmanagementsystem.request.UpdateRoleRequest;
+import com.bms.clinicmanagementsystem.request.role.CreateRoleRequest;
+import com.bms.clinicmanagementsystem.request.role.UpdateRoleRequest;
 import com.bms.clinicmanagementsystem.service.RoleService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;

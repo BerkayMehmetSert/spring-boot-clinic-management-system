@@ -5,6 +5,14 @@ public class BusinessLogMessage {
         throw new IllegalStateException(BusinessMessage.ILLEGAL_STATE_EXCEPTION);
     }
 
+    public static class Pdf {
+        private Pdf() {
+            throw new IllegalStateException(BusinessMessage.ILLEGAL_STATE_EXCEPTION);
+        }
+
+        public static final String PDF_GENERATED = "PDF Generated";
+    }
+
     public static class Appointment {
         private Appointment() {
             throw new IllegalStateException(BusinessMessage.ILLEGAL_STATE_EXCEPTION);
@@ -17,10 +25,9 @@ public class BusinessLogMessage {
         public static final String APPOINTMENT_LIST_FOUND = "Appointment list found successfully";
         public static final String APPOINTMENT_NOT_FOUND = "Appointment not found : {}";
         public static final String APPOINTMENT_LIST_EMPTY = "Appointment list is empty";
-        public static final String APPOINTMENT_ALREADY_EXISTS = "Appointment already exists : {}";
     }
 
-    public static class Clinic{
+    public static class Clinic {
         private Clinic() {
             throw new IllegalStateException(BusinessMessage.ILLEGAL_STATE_EXCEPTION);
         }
@@ -35,11 +42,14 @@ public class BusinessLogMessage {
         public static final String CLINIC_ALREADY_EXISTS = "Clinic already exists : {}";
     }
 
-    public static class Department{
+    public static class Department {
         private Department() {
             throw new IllegalStateException(BusinessMessage.ILLEGAL_STATE_EXCEPTION);
         }
 
+        public static final String CLINIC_DELETED_FROM_DEPARTMENT = "Clinic deleted from department successfully : {}";
+        public static final String CLINIC_ADDED_TO_DEPARTMENT = "Clinic added to department successfully : {}";
+        public static final String CLINIC_UPDATED_IN_DEPARTMENT = "Clinic updated in department successfully : {}";
         public static final String DEPARTMENT_CREATED = "Department created successfully";
         public static final String DEPARTMENT_UPDATED = "Department updated successfully : {}";
         public static final String DEPARTMENT_DELETED = "Department deleted successfully : {}";
@@ -50,11 +60,12 @@ public class BusinessLogMessage {
         public static final String DEPARTMENT_ALREADY_EXISTS = "Department already exists : {}";
     }
 
-    public static class Document{
+    public static class Document {
         private Document() {
             throw new IllegalStateException(BusinessMessage.ILLEGAL_STATE_EXCEPTION);
         }
 
+        public static final String DOCUMENT_PDF_CREATED = "Document PDF created successfully : {}";
         public static final String DOCUMENT_CREATED = "Document created successfully";
         public static final String DOCUMENT_UPDATED = "Document updated successfully : {}";
         public static final String DOCUMENT_DELETED = "Document deleted successfully : {}";
@@ -62,10 +73,9 @@ public class BusinessLogMessage {
         public static final String DOCUMENT_LIST_FOUND = "Document list found successfully";
         public static final String DOCUMENT_NOT_FOUND = "Document not found : {}";
         public static final String DOCUMENT_LIST_EMPTY = "Document list is empty";
-        public static final String DOCUMENT_ALREADY_EXISTS = "Document already exists : {}";
     }
 
-    public static class DocumentType{
+    public static class DocumentType {
         private DocumentType() {
             throw new IllegalStateException(BusinessMessage.ILLEGAL_STATE_EXCEPTION);
         }
@@ -80,7 +90,7 @@ public class BusinessLogMessage {
         public static final String DOCUMENT_TYPE_ALREADY_EXISTS = "Document type already exists : {}";
     }
 
-    public static class Employee{
+    public static class Employee {
         private Employee() {
             throw new IllegalStateException(BusinessMessage.ILLEGAL_STATE_EXCEPTION);
         }
@@ -95,7 +105,7 @@ public class BusinessLogMessage {
         public static final String EMPLOYEE_ALREADY_EXISTS = "Employee already exists : {}";
     }
 
-    public static class HasRole{
+    public static class HasRole {
         private HasRole() {
             throw new IllegalStateException(BusinessMessage.ILLEGAL_STATE_EXCEPTION);
         }
@@ -107,10 +117,9 @@ public class BusinessLogMessage {
         public static final String HAS_ROLE_LIST_FOUND = "Has role list found successfully";
         public static final String HAS_ROLE_NOT_FOUND = "Has role not found : {}";
         public static final String HAS_ROLE_LIST_EMPTY = "Has role list is empty";
-        public static final String HAS_ROLE_ALREADY_EXISTS = "Has role already exists : {}";
     }
 
-    public static class InDepartment{
+    public static class InDepartment {
         private InDepartment() {
             throw new IllegalStateException(BusinessMessage.ILLEGAL_STATE_EXCEPTION);
         }
@@ -122,10 +131,9 @@ public class BusinessLogMessage {
         public static final String IN_DEPARTMENT_LIST_FOUND = "In department list found successfully";
         public static final String IN_DEPARTMENT_NOT_FOUND = "In department not found : {}";
         public static final String IN_DEPARTMENT_LIST_EMPTY = "In department list is empty";
-        public static final String IN_DEPARTMENT_ALREADY_EXISTS = "In department already exists : {}";
     }
 
-    public static class Patient{
+    public static class Patient {
         private Patient() {
             throw new IllegalStateException(BusinessMessage.ILLEGAL_STATE_EXCEPTION);
         }
@@ -140,22 +148,22 @@ public class BusinessLogMessage {
         public static final String PATIENT_ALREADY_EXISTS = "Patient already exists : {}";
     }
 
-    public static class PatientCase{
+    public static class PatientCase {
         private PatientCase() {
             throw new IllegalStateException(BusinessMessage.ILLEGAL_STATE_EXCEPTION);
         }
 
+        public static final String PATIENT_CASE_DOCUMENT_CREATED = "Patient case document created successfully";
+        public static final String PATIENT_CASE_COMPLETED = "Patient case completed successfully : {}";
         public static final String PATIENT_CASE_CREATED = "Patient case created successfully";
         public static final String PATIENT_CASE_UPDATED = "Patient case updated successfully : {}";
-        public static final String PATIENT_CASE_DELETED = "Patient case deleted successfully : {}";
         public static final String PATIENT_CASE_FOUND = "Patient case found successfully : {}";
         public static final String PATIENT_CASE_LIST_FOUND = "Patient case list found successfully";
         public static final String PATIENT_CASE_NOT_FOUND = "Patient case not found : {}";
         public static final String PATIENT_CASE_LIST_EMPTY = "Patient case list is empty";
-        public static final String PATIENT_CASE_ALREADY_EXISTS = "Patient case already exists : {}";
     }
 
-    public static class Role{
+    public static class Role {
         private Role() {
             throw new IllegalStateException(BusinessMessage.ILLEGAL_STATE_EXCEPTION);
         }
@@ -170,10 +178,13 @@ public class BusinessLogMessage {
         public static final String ROLE_ALREADY_EXISTS = "Role already exists : {}";
     }
 
-    public static class Schedule{
+    public static class Schedule {
+
         private Schedule() {
             throw new IllegalStateException(BusinessMessage.ILLEGAL_STATE_EXCEPTION);
         }
+
+        public static final String SCHEDULE_DATE_IS_BEFORE_TODAY = "Schedule date is before today";
 
         public static final String SCHEDULE_CREATED = "Schedule created successfully";
         public static final String SCHEDULE_UPDATED = "Schedule updated successfully : {}";
@@ -182,10 +193,9 @@ public class BusinessLogMessage {
         public static final String SCHEDULE_LIST_FOUND = "Schedule list found successfully";
         public static final String SCHEDULE_NOT_FOUND = "Schedule not found : {}";
         public static final String SCHEDULE_LIST_EMPTY = "Schedule list is empty";
-        public static final String SCHEDULE_ALREADY_EXISTS = "Schedule already exists : {}";
     }
 
-    public static class Status{
+    public static class Status {
         private Status() {
             throw new IllegalStateException(BusinessMessage.ILLEGAL_STATE_EXCEPTION);
         }
@@ -200,7 +210,7 @@ public class BusinessLogMessage {
         public static final String STATUS_ALREADY_EXISTS = "Status already exists : {}";
     }
 
-    public static class StatusHistory{
+    public static class StatusHistory {
         private StatusHistory() {
             throw new IllegalStateException(BusinessMessage.ILLEGAL_STATE_EXCEPTION);
         }
@@ -212,6 +222,5 @@ public class BusinessLogMessage {
         public static final String STATUS_HISTORY_LIST_FOUND = "Status history list found successfully";
         public static final String STATUS_HISTORY_NOT_FOUND = "Status history not found : {}";
         public static final String STATUS_HISTORY_LIST_EMPTY = "Status history list is empty";
-        public static final String STATUS_HISTORY_ALREADY_EXISTS = "Status history already exists : {}";
     }
 }

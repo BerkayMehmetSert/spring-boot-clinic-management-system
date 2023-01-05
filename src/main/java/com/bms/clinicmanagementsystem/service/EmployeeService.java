@@ -8,9 +8,9 @@ import com.bms.clinicmanagementsystem.helper.message.BusinessLogMessage;
 import com.bms.clinicmanagementsystem.helper.message.BusinessMessage;
 import com.bms.clinicmanagementsystem.model.Employee;
 import com.bms.clinicmanagementsystem.repository.EmployeeRepository;
-import com.bms.clinicmanagementsystem.request.CreateEmployeeRequest;
-import com.bms.clinicmanagementsystem.request.UpdateEmployeeRequest;
-import com.bms.clinicmanagementsystem.request.UpdateUserEmployeeRequest;
+import com.bms.clinicmanagementsystem.request.employee.CreateEmployeeRequest;
+import com.bms.clinicmanagementsystem.request.employee.UpdateEmployeeRequest;
+import com.bms.clinicmanagementsystem.request.employee.UpdateUserEmployeeRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -99,7 +99,7 @@ public class EmployeeService {
                 .toList();
 
         if (employees.isEmpty()) {
-            log.error(BusinessMessage.Employee.EMPLOYEE_LIST_EMPTY);
+            log.error(BusinessLogMessage.Employee.EMPLOYEE_LIST_EMPTY);
             throw new EmployeeNotFoundException(BusinessMessage.Employee.EMPLOYEE_LIST_EMPTY);
         }
 

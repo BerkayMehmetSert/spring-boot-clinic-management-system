@@ -39,6 +39,9 @@ public class ControllerLogMessage {
         public static final String DEPARTMENT_DELETE = "Department API: Delete Department";
         public static final String DEPARTMENT_FIND = "Department API: Find Department";
         public static final String DEPARTMENT_FIND_ALL = "Department API: Find All Department";
+        public static final String DEPARTMENT_ADD_CLINIC = "Department API: Add Clinic to Department";
+        public static final String DEPARTMENT_REMOVE_CLINIC = "Department API: Remove Clinic from Department";
+        public static final String DEPARTMENT_UPDATE_CLINIC = "Department API: Update Clinic in Department";
     }
 
     public static class Document {
@@ -46,6 +49,7 @@ public class ControllerLogMessage {
             throw new IllegalStateException(BusinessMessage.ILLEGAL_STATE_EXCEPTION);
         }
 
+        public static final String DOCUMENT_PDF_CREATE = "Document API: Create PDF Document";
         public static final String DOCUMENT_CREATE = "Document API: Create Document";
         public static final String DOCUMENT_UPDATE = "Document API: Update Document";
         public static final String DOCUMENT_DELETE = "Document API: Delete Document";
@@ -120,9 +124,10 @@ public class ControllerLogMessage {
 
         public static final String PATIENT_CASE_CREATE = "PatientCase API: Create PatientCase";
         public static final String PATIENT_CASE_UPDATE = "PatientCase API: Update PatientCase";
-        public static final String PATIENT_CASE_DELETE = "PatientCase API: Delete PatientCase";
         public static final String PATIENT_CASE_FIND = "PatientCase API: Find PatientCase";
         public static final String PATIENT_CASE_FIND_ALL = "PatientCase API: Find All PatientCase";
+        public static final String PATIENT_CASE_COMPLETE = "PatientCase API: Complete PatientCase";
+        public static final String PATIENT_CASE_PDF = "PatientCase API: Generate PDF for PatientCase";
     }
 
     public static class Role {

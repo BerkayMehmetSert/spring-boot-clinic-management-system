@@ -1,4 +1,4 @@
-package com.bms.clinicmanagementsystem.request;
+package com.bms.clinicmanagementsystem.request.hasrole;
 
 public class CreateHasRoleRequest extends BaseHasRoleRequest {
 }

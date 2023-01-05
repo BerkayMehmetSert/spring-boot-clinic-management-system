@@ -7,8 +7,8 @@ import com.bms.clinicmanagementsystem.helper.message.BusinessLogMessage;
 import com.bms.clinicmanagementsystem.helper.message.BusinessMessage;
 import com.bms.clinicmanagementsystem.model.HasRole;
 import com.bms.clinicmanagementsystem.repository.HasRoleRepository;
-import com.bms.clinicmanagementsystem.request.CreateHasRoleRequest;
-import com.bms.clinicmanagementsystem.request.UpdateHasRoleRequest;
+import com.bms.clinicmanagementsystem.request.hasrole.CreateHasRoleRequest;
+import com.bms.clinicmanagementsystem.request.hasrole.UpdateHasRoleRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -100,8 +100,8 @@ public class HasRoleService {
         return hasRoleRepository.findById(id)
                 .filter(x -> x.getIsActive().equals(true))
                 .orElseThrow(() -> {
-            log.info(BusinessLogMessage.HasRole.HAS_ROLE_NOT_FOUND + id);
-            return new HasRoleNotFoundException(BusinessMessage.HasRole.HAS_ROLE_NOT_FOUND);
-        });
+                    log.info(BusinessLogMessage.HasRole.HAS_ROLE_NOT_FOUND + id);
+                    return new HasRoleNotFoundException(BusinessMessage.HasRole.HAS_ROLE_NOT_FOUND);
+                });
     }
 }
